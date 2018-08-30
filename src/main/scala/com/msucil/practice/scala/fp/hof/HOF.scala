@@ -1,4 +1,4 @@
-package com.msucil.practice.scala.fp.recursion
+package com.msucil.practice.scala.fp.hof
 
 /**
   * Higher Order Function Example
