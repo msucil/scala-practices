@@ -1,4 +1,4 @@
-package com.msucil.scalaPractices.json
+package com.msucil.practice.scala.json
 
 /**
   * Convert Json Object to Scala Object
