@@ -2,7 +2,7 @@ package com.msucil.practice.scala.fp.recursion
 
 
 /**
-  * Normal recursion implementation of factorial
+  * Normal/Linear recursion implementation of factorial
   */
 object Factorial {
 
