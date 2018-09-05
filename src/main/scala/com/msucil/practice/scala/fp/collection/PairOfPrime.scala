@@ -6,20 +6,22 @@ package com.msucil.practice.scala.fp.collection
   */
 object PairOfPrime {
 
-  def isPrime(n: Int): Boolean = (2 until n) forall( n % _ != 0)
+  def isPrime(n: Int): Boolean = (2 until n) forall (n % _ != 0)
 
   def pairOfPrime1(n: Int): Unit = {
-    val primePairs = (1 until n) flatMap(i =>
-      1 until i map(j => (i, j))) filter (pair => isPrime(pair._1 + pair._2))
+    val primePairs = (1 until n) flatMap (i =>
+      1 until i map (j => (i, j))) filter (pair => isPrime(pair._1 + pair._2))
     println(primePairs)
   }
 
-  def pairOfPrime2(n: Int): Unit = {
-    val primePairs = for {
-      i <- 1 until n
-       j <- 1 until i
-      isPrime(i+j)
-    } yield (i, j)
+  def pairOfPrime2(n: Int) = {
+    val primePairs =
+      for {
+        i <- 1 until n
+        j <- 1 until i
+        if isPrime(i + j)
+      }
+        yield (i, j)
 
     println(primePairs)
   }
